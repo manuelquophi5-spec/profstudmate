@@ -2,7 +2,7 @@ import HomePage from "@/components/home/HomePage";
 import { generateMetaInfo, getSchemaMarkup } from "@/utils/generateMetaInfo";
 import { Metadata } from "next";
 import JsonLd from "@/components/Schema/JsonLd";
-
+import { Analytics } from "@vercel/analytics/next"
 interface HomePageProps {
   searchParams?: Promise<{ lang?: string }>;
 }
