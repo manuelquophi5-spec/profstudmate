@@ -10,6 +10,8 @@ import { Toaster } from "react-hot-toast";
 import PushNotificationLayout from "@/components/firebaseNotification/PushNotification";
 import Script from "next/script";
 import { cookies } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 interface InitialLangData {
   code: string;
@@ -115,6 +117,8 @@ export default async function RootLayout({
           `,
           }}
         />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
